@@ -1,0 +1,14 @@
+pyttsx3
+streamlit
+google-generativeai
+python-dotenv
+langchain
+PyPDF2
+chromadb
+faiss-cpu
+gtts
+pillow
+pandas
+requests
+
+googletrans
