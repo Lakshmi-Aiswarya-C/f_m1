@@ -333,17 +333,7 @@ Use technical medical language suitable for healthcare professionals.
             gemini_summary = get_gemini_response(full_prompt, image_data, user_input)
             st.session_state.response_text = gemini_summary
 
-            # WHO & RxNorm Info
-            tablet_name = user_input.strip().split()[0] if user_input else "Metoprolol Tartrate"
-            who_info = get_who_info(tablet_name, who_df)
-            rxnorm_info = fetch_rxnorm_data(tablet_name)
-
-            st.markdown("<h3 style='color:#ffd700;'>Tablet Information Summary</h3>", unsafe_allow_html=True)
-            st.success(gemini_summary)
-
-            with st.expander("Additional Info (WHO & RxNorm)"):
-                st.markdown(who_info)
-                st.markdown(rxnorm_info)
+            
 
         except Exception as e:
             st.error(f"Error processing the tablet info: {e}")
